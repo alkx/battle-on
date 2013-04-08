@@ -25,7 +25,7 @@ your attack - we help you do that.
 
 First, require 'battle-on'
 
-    require 'battle-on'
+    require 'battle_on'
 
 Now you're ready to begin the game. To start a new game, all that's
 required is your name and email:
