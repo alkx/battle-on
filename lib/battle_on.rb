@@ -1,8 +1,5 @@
 require "battle_on/version"
 
-#module Battle
-  #module On
-
 module BattleOn
 
   def self.begin(name, email)
@@ -14,6 +11,3 @@ module BattleOn
   end
 
 end
-
-  #end
-#end
