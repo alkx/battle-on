@@ -6,8 +6,8 @@ module BattleOn
   #Start the game
   #
   #mandatory parameters
-  #email: my@email.com
   #name: My Name
+  #email: my@email.com
 
   class RegisterGame
     attr_reader :name, :email
@@ -31,5 +31,4 @@ module BattleOn
     end
 
   end
-
 end

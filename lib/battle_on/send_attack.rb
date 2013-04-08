@@ -1,3 +1,5 @@
+require 'JSON'
+
 module BattleOn
 
   #mandatory parameters:
@@ -29,9 +31,11 @@ module BattleOn
     private
 
     def attack
-      RestClient.post "http://battle.platform45.com/nuke", { x:  x_axis,
-                                                             y:  y_axis,
-                                                             id: game_id}.to_json
+      RestClient.post "http://battle.platform45.com/nuke", attack_params
+    end
+
+    def attack_params
+      { x: x_axis, y: y_axis, id: game_id}.to_json 
     end
 
     def get_x(args)
@@ -41,5 +45,4 @@ module BattleOn
     end
 
   end
-
 end
