@@ -3,12 +3,6 @@ require 'rest_client'
 
 module BattleOn
 
-  #Start the game
-  #
-  #mandatory parameters
-  #name: My Name
-  #email: my@email.com
-
   class RegisterGame
     attr_reader :name, :email
 
@@ -17,7 +11,8 @@ module BattleOn
     end
 
     def initialize(name, email)
-      @name, @email = name, email
+      @name =  name  or raise ArgumentError, "Missing your name"
+      @email = email or raise ArgumentError, "Missing your email"
     end
 
     def execute

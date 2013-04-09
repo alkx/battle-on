@@ -23,7 +23,7 @@ Now you're ready to attack!
 When you're in the middle of game of Battleship you want to focus on
 your attack - we help you do that. 
 
-First, require 'battle-on'
+First, require 'battle_on'
 
     require 'battle_on'
 

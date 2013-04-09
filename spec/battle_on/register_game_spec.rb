@@ -50,5 +50,28 @@ describe BattleOn::RegisterGame do
       end
 
     end
+
+    context "request is formatted incorrectly" do
+
+      let(:name_only)  { "henry thornton" }
+
+      context "email is missing" do
+
+        it "raises an ArgumentError" do
+          expect { begin_battle.execute(name_only, nil) }.to raise_error(ArgumentError, /Missing your email/)
+        end
+
+      end
+
+      let(:email_only) { "henry@thethornton.com" }
+
+      context "name is missing" do
+
+        it "raises an ArgumentError" do
+          expect { begin_battle.execute(nil, email_only) }.to raise_error(ArgumentError, /Missing your name/)
+        end
+
+      end
+    end
   end
 end
